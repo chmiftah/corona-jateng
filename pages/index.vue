@@ -268,7 +268,7 @@ export default {
           },
          async fetch()
           {
-                  let response = await axios.get(`/api/v1/`)
+                  let response = await axios.get(`https://api.kawalcorona.com/indonesia/provinsi`)
                   console.log(response.data)
                   this.kasus= response.data
             },
