@@ -268,7 +268,7 @@ export default {
           },
          async fetch()
           {
-                  let response = await axios.get(`https://api.kawalcorona.com/indonesia/provinsi/`)
+                  let response = await axios.get(`/api/v1/`)
                   console.log(response.data)
                   this.kasus= response.data
             },
@@ -286,7 +286,7 @@ export default {
     },
   computed:{
      filter() {
-      return this.kasus((kasus) => {
+      return this.kasus.filter((kasus) => {
         return kasus.attributes.Provinsi
           .toLowerCase()
           .includes(this.keyword.toLowerCase());
