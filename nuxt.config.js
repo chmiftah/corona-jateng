@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'myblog',
+    title: 'info corona',
     htmlAttrs: {
       lang: 'en'
     },
@@ -50,6 +50,9 @@ export default {
   },
   proxy: {
     '/api/v1': { target: 'https://api.kawalcorona.com/indonesia/provinsi', pathRewrite: {'^/api/v1': ''} }
-    }
+    },
+    generate: {
+    fallback: true
+  }
 
 }
