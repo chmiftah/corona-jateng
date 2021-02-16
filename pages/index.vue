@@ -286,7 +286,7 @@ export default {
     },
   computed:{
      filter() {
-      return this.kasus.filter((kasus) => {
+      return this.kasus((kasus) => {
         return kasus.attributes.Provinsi
           .toLowerCase()
           .includes(this.keyword.toLowerCase());
